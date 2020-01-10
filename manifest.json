@@ -7,11 +7,21 @@
       "matches": [
         "<all_urls>"
       ],
-      "js": ["jquery-3.4.1.min.js", "content.js"]
+      "js": [
+        "jquery-3.4.1.min.js",
+        "content.js"
+      ]
     }
   ],
   "browser_action": {},
   "background": {
-    "scripts": ["background.js"]
-  }
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "oauth2": {
+    "client_id": "138537118015-akqp68qqqd2611dipcm99soe65aj3r7d.apps.googleusercontent.com",
+    "scopes": "https://www.googleapis.com/auth/calendar"
+  },
+  "key": "AIzaSyB5rZiq4PhWiyyoY2s-imN5Yppdk1Iq9aQ"
 }

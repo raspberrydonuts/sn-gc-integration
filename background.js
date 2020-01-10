@@ -1,4 +1,5 @@
 // background.js
+
 var clientId = "138537118015-akqp68qqqd2611dipcm99soe65aj3r7d.apps.googleusercontent.com";
 var apiKey = 'AIzaSyB5rZiq4PhWiyyoY2s-imN5Yppdk1Iq9aQ';
 var scopes = 'https://www.googleapis.com/auth/calendar';
@@ -65,7 +66,7 @@ function makeApiCall() {
         'calendarId': 'primary',
         'resource': event
     });
-    return request;
+    console.log(request);
     // request.execute(function (event) {
     //     appendPre('Event created: ' + event.htmlLink);
     // });
@@ -73,14 +74,12 @@ function makeApiCall() {
 
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function (tab) {
+    
     // Send a message to the active tab
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         var activeTab = tabs[0];
-        var request = makeApiCall();
+        //   makeApiCall();
          // (sends arbitrary JSON payload to current tab)
-        chrome.tabs.sendMessage(activeTab.id, 
-            { 
-                "message": request,
-            });
+        chrome.tabs.sendMessage(activeTab.id, { "message": "clicked_browser_action" });
     });
 });
