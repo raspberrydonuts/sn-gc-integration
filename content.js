@@ -1,20 +1,7 @@
 // content.js
 // alert("Hello from your Chrome extension!");
 
-chrome.identity.getAuthToken({ 'interactive': false }, function (token) {
-    const headers = new Headers({
-        'Authorization': 'Bearer ' + token,
-        'Content-Type': 'application/json'
-    })
 
-    const queryParams = { headers };
-
-    fetch('https://www.googleapis.com/calendar/v3/calendars/primary/events', queryParams)
-        .then((response) => response.json()) // Transform the data into json
-        .then(function (data) {
-            console.log(data);
-        })
-})
 // listen for the message from background.js
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
