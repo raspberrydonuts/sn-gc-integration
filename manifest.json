@@ -21,9 +21,10 @@
   },
   "permissions": ["identity"],
   "oauth2": {
-    "client_id": "664783665426-n0d983q4fsend5o7l60cioo1tdg8ubsu.apps.googleusercontent.com",
+    "client_id": "",
     "scopes": [
         "https://www.googleapis.com/auth/calendar.events"
     ]
-  }
+  },
+  "key": ""
 }
