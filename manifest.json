@@ -1,30 +1,26 @@
 {
+  "name": "sn-gc-integration",
+  "version": "1.0",
+  "description": "Creates Google Calendar events from Service Now",
   "manifest_version": 2,
-  "name": "ServiceNow & Google Calendar Integration",
-  "version": "0.1",
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "jquery-3.4.1.min.js",
-        "content.js"
-      ]
-    }
-  ],
-  "browser_action": {},
+  "browser_action": {
+    "default_title": "FriendBlock, friends face's in a block."
+  },
   "background": {
     "scripts": [
       "background.js"
-    ]
+    ],
+    "persistent": false
   },
-  "permissions": ["identity"],
+  "permissions": [
+    "identity"
+  ],
   "oauth2": {
-    "client_id": "",
-    "scopes": [
-        "https://www.googleapis.com/auth/calendar.events"
+    "client_id": "1051284386273-4eaf9l1f3e969u1h68dvoe477305ngop.apps.googleusercontent.com",
+    "scopes":[
+      "https://www.googleapis.com/auth/contacts.readonly",
+      "https://www.googleapis.com/auth/calendar"
     ]
   },
-  "key": ""
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0T8mM1QS2VDqJdnNQrN91c4uVJ8k8s61oyImf6a9ZAZCtlBhlykwC3DgWWjkua/tVwaIXRLU+NuRn6iLNVyHs6Zv+2oFNTxN6r+5uZo8ri57giVOWiJ+SbFHkavrhNU0lufAe20JG9Kh276fc6N4wzz72RBIUupv7UX5+rynjq0e0VoO/bFYySfrFvFfR/JUNX3cYY9dgVHnndjyJhK53QtQXg2dWGQJF5MVEVuAq4sFBJSSAd6LfqqpmDn/+tn0Sa4QTwF1fP4b4gbwyWtUGKWrOdNDyETXI0tGnJqT/o8BdoeRmSgp70597xznFqwhMMOy3F6Jeid+TyWMe7EJ8QIDAQAB"
 }
