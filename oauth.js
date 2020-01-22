@@ -10,7 +10,6 @@ window.onload = function () {
 window.onload = function () {
     document.querySelector('button').addEventListener('click', function () {
         chrome.identity.getAuthToken({ interactive: true }, function (token) {
-            alert(window.parent.document.title);
             let event =
             {
                 'summary': 'IT WORKED',
